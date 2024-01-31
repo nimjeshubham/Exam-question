@@ -38,6 +38,15 @@ Get Information of All questions
 <br>
 <br>
 
+<form action="getAllByTest">
+Get All questions of test ID
+<input type="text" name ="testId"><br>
+<input type ="submit">
+</form>
+
+<br>
+<br>
+
 <form action="update">
 Update Question <br>
 Question Id <input type ="text" name ="qId">

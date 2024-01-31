@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Test preview</h1>
+<h1>Question preview</h1>
 
 <% Question question = (Question)request.getAttribute("question");%>
 <p>
@@ -17,23 +17,28 @@
  Question ID :<%=question.getQuestionId() %><br>
  Question : <%= question.getQuestion() %><br>
  A: <%= question.getOptionA()%>        B:<%= question.getOptionB()%>
- C: <%= question.getOptionC()%>        D:<%= question.getOptionD()%>
+ C: <%= question.getOptionC()%>        D:<%= question.getOptionD()%><br>
  
  Answer: <%= question.getAnswer()%>
 </p>
 <form action="update">
 Update Test <br>
-Test Id<input type="Text" placeholder=<%=question.getQuestionId() %> name="testId"><br>
-Subject <input type ="text" name ="subject">
-Date <input type="date" name ="date">
-<input type = "submit" value ="Update">
+Question Id<input type="Text" placeholder=<%=question.getQuestionId() %> name="qId"><br>
+Test ID  <input type ="text" name ="test"><br>
+Question <input type="text" name ="question"><br>
+A: <input type ="text" name ="a"><br>
+B: <input type ="text" name ="b"><br>
+C: <input type ="text" name ="c"><br>
+D: <input type ="text" name ="d"><br>
+Answer: <input type ="text" name ="answer"><br>
+<input type ="submit">
 </form>
 
 <br>
 <br>
 <form action="delete">
-Delete Test <br>
-<input type="Text" placeholder=<%=question.getQuestionId() %> name="testId"><br>
+Delete question <br>
+<input type="Text" placeholder=<%=question.getQuestionId() %> name="qId"><br>
 <input type = "submit" value ="Delete">
 </form>
 

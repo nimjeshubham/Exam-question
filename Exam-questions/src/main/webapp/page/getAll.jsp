@@ -26,17 +26,22 @@
 
 <form action="update">
 Update Test <br>
-Test Id<input type="Text"  name="testId"><br>
-Subject <input type ="text" name ="subject">
-Date <input type="date" name ="date">
-<input type = "submit" value ="Update">
+Question Id<input type="Text"  name="qId"><br>
+Test ID  <input type ="text" name ="test"><br>
+Question <input type="text" name ="question"><br>
+A: <input type ="text" name ="a"><br>
+B: <input type ="text" name ="b"><br>
+C: <input type ="text" name ="c"><br>
+D: <input type ="text" name ="d"><br>
+Answer: <input type ="text" name ="answer"><br>
+<input type ="submit">
 </form>
 
 <br>
 <br>
 <form action="delete">
-Delete Test <br>
-<input type="Text"  name="testId"><br>
+Delete question <br>
+<input type="Text"  name="qId"><br>
 <input type = "submit" value ="Delete">
 </form>
 </body>

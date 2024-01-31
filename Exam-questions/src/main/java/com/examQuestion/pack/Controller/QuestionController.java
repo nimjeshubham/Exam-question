@@ -125,5 +125,14 @@ public class QuestionController {
 		mv.addObject("list", list);
 		return mv;
 	}
+	
+	@RequestMapping("/getAllByTest")
+	public ModelAndView getAllByTest(HttpServletRequest req, HttpServletResponse res) {
+		ModelAndView mv = new ModelAndView();
+		List<Question> list = dao.getByTestId(Integer.parseInt(req.getParameter("testId")));
+		mv.setViewName("getAll");
+		mv.addObject("list", list);
+		return mv;
+	}
 
 }
