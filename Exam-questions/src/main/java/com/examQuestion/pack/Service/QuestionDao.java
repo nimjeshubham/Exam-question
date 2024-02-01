@@ -18,6 +18,10 @@ public class QuestionDao {
 		return repo.save(q);
 	}
 	
+	public List<Question> insertAll(List<Question> question ){
+		return repo.saveAll(question);
+	}
+	
 	public Question getById(Integer Id) {
 		return repo.findById(Id).orElse(null);
 	}
@@ -42,8 +46,9 @@ public class QuestionDao {
 		return repo.save(qq);
 	}
 	
-	public void deleteById(Integer id) {
+	public String deleteById(Integer id) {
 		repo.deleteById(id);
+		return "Deleted the value if Id:"+id;
 	}
 
 }
