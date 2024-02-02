@@ -44,6 +44,11 @@ public class QuestionController {
 		return dao.getById(id);
 	}
 	
+	@GetMapping("/getByTestId/{id}")
+	public List<Question> getByTestId(@PathVariable int id){
+		return dao.getByTestId(id);
+	}
+	
 	@GetMapping("/getAll")
 	public List<Question> getAll(){
 		return dao.getAll();
